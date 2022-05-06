@@ -1,0 +1,25 @@
+{
+    "name": "Meet Participants Checklist",
+    "version": "0.0.1",
+    "description": "Adds a checkbox next to each Google Meet participant",
+    "manifest_version": 3,
+    "icons": {
+        "16": "gmeet_16.png",
+        "32": "gmeet_32.png",
+        "48": "gmeet_48.png",
+        "128": "gmeet_128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://meet.google.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "style.css"
+            ]
+        }
+    ]
+}
