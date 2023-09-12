@@ -19,11 +19,11 @@ const participantObserver = new MutationObserver(mutations => {
 const rootObserver = new MutationObserver(mutations => {
     for (const mutation of mutations) {
         if (mutation.type === 'childList') {
-            const sidebar = document.querySelector('.R3Gmyc.qwU8Me:not(.qdulke)')
+            const sidebar = document.querySelector('.R3Gmyc:not(.qdulke)')
             if (sidebar) {
                 if (!isParticipantListObserverSet) {
                     const participantContainer = document.querySelector('[aria-label="Participants"]');
-                    participantObserver.observe(participantContainer, { childList: true, subtree: true });
+                    participantObserver?.observe(participantContainer, { childList: true, subtree: true });
                     isParticipantListObserverSet = true;
                     addCheckBoxes();
                 } else if (mutation.removedNodes.length && mutation.removedNodes[0].classList != undefined && mutation.removedNodes[0].classList.contains('checklist')) {
