@@ -19,7 +19,7 @@ const participantObserver = new MutationObserver(mutations => {
 const rootObserver = new MutationObserver(mutations => {
     for (const mutation of mutations) {
         if (mutation.type === 'childList') {
-            const sidebar = document.querySelector('.R3Gmyc.qwU8Me:not(.qdulke)')
+            const sidebar = document.querySelector('.R3Gmyc')
             if (sidebar) {
                 if (!isParticipantListObserverSet) {
                     const participantContainer = document.querySelector('[aria-label="Participants"]');
